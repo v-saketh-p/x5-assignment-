@@ -1,0 +1,236 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(233, 216, 167)
+}
+
+.video-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    /* filter: brightness(70%); */
+    filter: contrast(120%);
+
+    /* margin-top: 50px; */
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+.blurred-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Apply the backdrop-filter for the blur effect */
+  backdrop-filter: blur(10px); /* Adjust the pixel value for desired blur intensity */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Example text color for readability */
+  text-align: center;
+}
+
+.nav-bar{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background: rgb(1, 43, 11);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+.nav-link{
+    font-size: 18px;
+    color: rgba(128, 152, 50);
+    text-decoration: none;
+    margin: 0 50px 0 50px;
+}
+
+a.nav-link:hover{
+    color: #109a06;
+}
+
+a.nav-link:active{
+    color: #ced6ce;
+}
+
+/* a.nav-link:active{
+    color: #ced6ce;
+    font-weight: bold;
+} */
+
+.main-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font:50px 'Poppins', sans-serif,bold;
+    color: #e49343fb;
+}
+
+.btn{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgb(1, 43, 11);
+    text-align: center;
+    font: 30px 'Poppins', sans-serif,bold;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    background-color: #16a50c;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+
+/* .container{
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+} */
+
+.container{
+    position: absolute;
+    margin: 60px;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.tree-container{
+    /* position: absolute;   */
+    /* display: grid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    row-gap: 50px;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+.tree{
+    width: 200px;
+    height: 300px;
+    /* background-image: url('trees/native/alder tree.jpg'); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 10px 6px 8px rgb(28, 71, 1);
+    padding: 20px;
+    margin: 20px;
+    background-color: darkgreen;
+
+}
+
+.name{
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 210px;
+}
+
+.tree-info{
+    color: black
+}
+
+.toggle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.toggle{
+    padding: 10px;
+    width: 200px;
+    background-color: rgb(1, 43, 11);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-native{
+    background-color: rgb(1, 43, 11);
+    color: white;
+    border-radius: 15px;
+    margin: 10px;
+    
+}
+
+.btn-non-native {
+    background-color: rgb(1, 43, 11);
+    color: white;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+
+
+.btn-native:hover, .btn-non-native:hover {
+    background-color: #16a50c;
+    cursor: pointer;
+    color: black;
+}
+
+.btn-native a.active{
+    background-color: #109a06;
+    color: black;
+}
+
+
+.btn-native-changed{
+    background-color: #109a06;
+    color: black;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 30px;
+    /* padding: 10px; */
+    height: 50px;
+
+}
+
+.btn-non-native-changed {
+    background-color: #109a06;
+    color: black;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 30px;
+    /* padding: 10px; */
+    height: 50px;
+}
+
+
