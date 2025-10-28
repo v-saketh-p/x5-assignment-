@@ -97,9 +97,6 @@ a.nav-link:active{
     color: black;
 }
 
-
-
-
 /* .container{
     margin-top: 100px;
     text-align: center;
@@ -168,12 +165,10 @@ a.nav-link:active{
     margin-top: 20px;
 }
 
-
-
 .toggle{
     padding: 10px;
     width: 200px;
-    background-color: rgb(1, 43, 11);
+    background-color: rgb(103, 206, 127);
     color: white;
     border: none;
     border-radius: 10px;
@@ -184,37 +179,34 @@ a.nav-link:active{
 }
 
 .btn-native{
-    background-color: rgb(1, 43, 11);
-    color: white;
+    background-color: rgb(153, 251, 176);
+    color: rgb(6, 62, 2);;
     border-radius: 15px;
     margin: 10px;
     
 }
 
 .btn-non-native {
-    background-color: rgb(1, 43, 11);
-    color: white;
+    background-color: rgb(153, 251, 176);
+    color: rgb(6, 62, 2);
     border-radius: 15px;
     margin: 10px;
 }
 
-
-
 .btn-native:hover, .btn-non-native:hover {
     background-color: #16a50c;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
-.btn-native a.active{
-    background-color: #109a06;
+/* .btn-native a.active{
+    background-color: rgb(153, 251, 176)#109a06;
     color: black;
-}
-
+} */
 
 .btn-native-changed{
-    background-color: #109a06;
-    color: black;
+    background-color: rgb(6, 62, 2);
+    color: white;
     border-radius: 15px;
     margin: 10px;
     font-size: 30px;
@@ -224,15 +216,14 @@ a.nav-link:active{
 }
 
 .btn-non-native-changed {
-    background-color: #109a06;
-    color: black;
+    background-color: rgb(6, 62, 2);
+    color: white;
     border-radius: 15px;
     margin: 10px;
     font-size: 30px;
     /* padding: 10px; */
     height: 50px;
 }
-
 
 .season-container{
     position: absolute;
@@ -286,4 +277,115 @@ a.nav-link:active{
     cursor: pointer;
 }
 
+.header{
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font:50px 'Poppins', sans-serif,bold;
+    color: #4d2804fb;
+    font-weight: bold;
+}
+
+.quiz-container{
+    position: absolute;
+    margin: 200px;
+    margin-left: 100px;
+    width: 80%;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* display: flex; */
+    box-shadow: 6px 8px 10px rgb(99, 48, 0);
+    background-color: rgb(220, 185, 121)
+}
+
+.question-container{
+    width: 80%;
+    margin-bottom: 20px;
+    color: black;
+
+}
+
+.options-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.option-button{
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(115, 233, 142);
+    color: rgb(8, 65, 2);
+    cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-q{
+    margin: 10px;
+    width: 200px;
+    font-size: 20px;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;   
+}
+
+.btn-q:hover{
+    background-color: #16a50c;
+    color: black;
+}
+
+#next-btn{
+    /* float: right; */
+    margin-right: 10px;
+    width: 100px;
+    left: 90%;
+
+}
+
+.result-container{
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+}
+
+.btn-success{
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 10px;
+    /* padding: 10px; */
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+    font-size: 20px;
+}
+
+.btn-danger{
+    background-color: #f44336; /* Red */
+    color: white;
+    border-radius: 10px;
+    /* padding: 10px; */
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+    font-size: 20px;
+}
 

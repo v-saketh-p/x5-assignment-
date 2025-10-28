@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="nav-bar">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="explore_trees.html">Tree Explorer</a>
+      <a class="nav-link" href="seasonal_showcase.html">Seasonal Showcase</a>
+      <a class="nav-link" href="quiz.html">Tree Quiz</a>
+      <a class="nav-link" href="map.html">Tree Map</a>
+    </div>
+    <div class="header">
+        Quiz Master
+        <!-- <p>Test your knowledge about trees!</p> -->
+    </div>
+    <div class="quiz-container">
+        <div class="question-container"></div>
+        <div class="options-container">
+        </div>
+        <button class="option-button btn btn-primary" id="next-btn">Next</button>
+        <div class="result-container"></div>
+    </div>
+    
+</body>
+<script>
+    const quizData = [
+        {
+            question: "Which of the following trees is known for producing acorns?",
+            options: ["Beech", "Oak", "Hazel", "Birch"],
+            answer: "Oak"
+        },
+        {
+            question: "The Silver Birch is easy to identify because of its distinctive:",
+            options: ["Red Berries", "White bark", "Long pine needles", "Smooth green leaves"],
+            answer: "White bark"
+        },
+        {
+            question: "The Rowan tree is also called what?",
+            options: ["Mountain Ash", "Red Maple", "Elder", "Yew"],
+            answer: "Mountain Ash"
+        },
+        {
+            question: "What type of habitat does the Willow tree prefer?",
+            options: ["Dry, sandy soils", "Rocky hillsides", "Wetlands and riverbanks", "Open meadows"],
+            answer: "Wetlands and riverbanks"
+        },
+        {
+            question: "Which native UK tree is famous for its winged seeds known as “helicopters”",
+            options: ["Sycamore", "Beech", "Holly", "Rowan"],
+            answer: "Sycamore"
+        },
+        
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    const questionContainer = document.querySelector('.question-container');
+    const optionsContainer = document.querySelector('.options-container');
+    const nextBtn = document.getElementById('next-btn');
+    const resultContainer = document.querySelector('.result-container');
+
+    function loadQuestion() {
+        const currentQuestion = quizData[currentQuestionIndex];
+        questionContainer.innerText = currentQuestion.question;
+        optionsContainer.innerHTML = '';
+        currentQuestion.options.forEach(option => {
+            const button = document.createElement('button');
+            button.classList.add('btn-q', 'btn-outline-primary', 'option-btn');
+
+            button.innerText = option;
+            button.onclick = () => selectOption(option);
+            optionsContainer.appendChild(button);
+        });
+    }
+
+
+
+    function selectOption(selectedOption) {
+        const currentQuestion = quizData[currentQuestionIndex];
+        optionsContainer.querySelectorAll('button').forEach(btn => {
+            btn.disabled = true;
+            if (btn.innerText === currentQuestion.answer) {
+                btn.classList.add('btn-success');
+            } 
+            else if (btn.innerText === selectedOption) {
+                btn.classList.add('btn-danger');
+            }
+        });
+
+        if (selectedOption === currentQuestion.answer) {
+            score++;
+        }
+        nextBtn.style.display = 'block';
+        
+    }
+
+    nextBtn.onclick = () => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < quizData.length) {
+            loadQuestion();
+
+        } else {
+            showResult();
+        }
+    };
+
+    function showResult() {
+        questionContainer.style.display = 'none';
+        optionsContainer.style.display = 'none';
+        nextBtn.style.display = 'none';
+        resultContainer.innerText = `Quiz Completed! Your score: ${score} out of ${quizData.length}`;
+        const retakeBtn = document.createElement('button');
+        retakeBtn.classList.add('btn', 'btn-primary', 'mt-3');
+        retakeBtn.innerText = 'Retake Quiz';
+        retakeBtn.onclick = () => {
+            currentQuestionIndex = 0;
+            score = 0;
+            questionContainer.style.display = 'block';
+            optionsContainer.style.display = 'flex';
+            nextBtn.style.display = 'block';
+            resultContainer.innerText = '';
+            loadQuestion();
+        };
+
+        resultContainer.appendChild(retakeBtn);
+    }
+    loadQuestion();
+</script>
+</html>
