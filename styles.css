@@ -70,11 +70,6 @@ a.nav-link:active{
     color: #ced6ce;
 }
 
-/* a.nav-link:active{
-    color: #ced6ce;
-    font-weight: bold;
-} */
-
 .main-text{
     position: absolute;
     top: 50%;
@@ -103,14 +98,6 @@ a.nav-link:active{
     cursor: pointer;
     color: black;
 }
-
-/* .container{
-    margin-top: 100px;
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-} */
 
 .container{
     position: absolute;
@@ -205,11 +192,6 @@ a.nav-link:active{
     cursor: pointer;
     color: white;
 }
-
-/* .btn-native a.active{
-    background-color: #109a06;
-    color: black;
-} */
 
 .btn-native-changed{
     background-color: rgb(6, 62, 2);
@@ -374,7 +356,7 @@ a.nav-link:active{
 }
 
 .btn-success{
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
     border-radius: 10px;
     /* padding: 10px; */
@@ -385,7 +367,7 @@ a.nav-link:active{
 }
 
 .btn-danger{
-    background-color: #f44336; /* Red */
+    background-color: #f44336; 
     color: white;
     border-radius: 10px;
     /* padding: 10px; */
@@ -449,5 +431,3 @@ a.nav-link:active{
     justify-content: center;
     margin-left: 45%;
 }
-
-
